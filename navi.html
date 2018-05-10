@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Navigation</title>
+</head>
+<body>
+  <nav class="navigation">
+    <div class="navi_logo">
+      <a href="home"><img src="images/h1_logo.png"></a>
+    </div>
+    <div class="navi_menu">
+      <a href="#">SI Business</a>
+      <a href="#">Web Business</a>
+      <a href="#">Communication</a>
+      <a href="#">About US</a>
+    </div>
+  </nav>
+
+  <nav class="small_navi_menu">
+    <div class="navi_logo">
+      <a href="home"><img src="images/h1_logo.png"></a>
+    </div>
+
+    <img src="images/menu.png" id="c_img" class="small_navi_menu_img dropbtn" onClick="myFunction()">
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">SI BUSINESS</a>
+      <div class="dropdown-subcontent">
+        <a href="#">SI</a>
+        <a href="#">Solution</a>
+        <a href="#">IT consulting</a>
+        <a href="#">Major Business Results</a>
+      </div>
+      <a href="#">Web BUSINESS</a>
+      <div class="dropdown-subcontent">
+        <a href="#">수출지원기반활용사업</a>
+        <a href="#">웹사이트&모바일웹</a>
+      </div>
+      <a href="#">COMMUNICATION</a>
+      <div class="dropdown-subcontent">
+        <a href="#">교육뉴스</a>
+      </div>
+      <a href="#">ABOUT US</a>
+      <div class="dropdown-subcontent">
+        <a href="#">맵스코는?</a>
+        <a href="#">조직</a>
+        <a href="#">고객사</a>
+        <a href="#">채용안내</a>
+        <a href="#">오시는 길</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+  var state = 0;
+function myFunction() {
+  if (state == 0) {
+    document.getElementById("c_img").src = "images/x.png";
+    state = 1;
+  } else {
+    document.getElementById("c_img").src = "images/menu.png";
+    state = 0;
+  }
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+// window.onclick = function(e) {
+//   if (!e.target.matches(".dropbtn")) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     for (var d = 0; d < dropdowns.length; d++) {
+//       var openDropdown = dropdowns[d];
+//       if (openDropdown.classList.contains("show")) {
+//         openDropdown.classList.remove("show");
+//       }
+//     }
+//   }
+// };
+</script>
+  </script>
+</body>
+</html>
